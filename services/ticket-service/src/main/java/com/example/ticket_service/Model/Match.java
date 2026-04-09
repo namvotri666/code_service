@@ -13,9 +13,10 @@ import java.util.List;
 @Setter
 public class Match {
     @Id
-    @Column
+
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(name = "match_name")
     private String matchName;
     @OneToMany(mappedBy = "match", cascade = CascadeType.ALL)
     @JsonManagedReference

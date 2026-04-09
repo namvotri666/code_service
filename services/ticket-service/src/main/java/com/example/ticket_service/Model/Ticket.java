@@ -13,9 +13,9 @@ public class Ticket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column
+    @Column(name = "stands_detail")
     private String standsDetail;
-    @Column
+    @Column(name = "price")
     private double price;
     @ManyToOne
     @JoinColumn(name = "match_id")
