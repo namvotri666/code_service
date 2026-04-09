@@ -1,5 +1,6 @@
 package com.example.ticket_service.Service;
 
+import com.example.ticket_service.DTO.TicketMatchDTO;
 import com.example.ticket_service.DTO.UserTicket;
 import com.example.ticket_service.Model.Ticket;
 import com.example.ticket_service.Repository.TicketRepository;
@@ -11,8 +12,7 @@ import java.util.List;
 public class TicketService {
     @Autowired
     private TicketRepository ticketRepository;
-    public List<Ticket> getTickets(){
-        return ticketRepository.findAll();
+    public List<TicketMatchDTO> getTicketMatch(){
+        return ticketRepository.getTicketAndMatch();
     }
-
 }
